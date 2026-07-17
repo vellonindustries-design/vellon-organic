@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   </head>
   <body>
@@ -53,6 +54,7 @@
     <footer><div class="wrap footer-grid"><div><a class="brand footer-brand" href="#home"><img src="assets/vellon-logo.jpeg" alt="" /><span>Vellon <i>Organic</i></span></a><p>Natural • Pure • Trusted</p></div><div><h3>Contact</h3><a href="mailto:vellonindustries@gmail.com">vellonindustries@gmail.com</a><a href="tel:+919728914046">+91 97289 14046</a></div><div><h3>Explore</h3><a href="#shop">Shop all products</a><a href="#about">Our promise</a><a href="#reviews">Reviews</a></div></div><div class="wrap copyright">© <span id="year"></span> Vellon Organic. All rights reserved.</div></footer>
 
     <aside id="cart-drawer" class="cart-drawer" aria-label="Your bag" aria-hidden="true"><div class="cart-head"><h2>Your bag</h2><button class="icon-button" id="close-cart" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><b id="cart-total">₹0</b></div><form id="shipping-form" class="shipping-form"><h3>Delivery details</h3><input name="name" autocomplete="name" placeholder="Full name" required /><input name="phone" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile number" required /><textarea name="address" autocomplete="street-address" placeholder="House no., street, area" required></textarea><div class="form-row"><input name="city" autocomplete="address-level2" placeholder="City" required /><input name="state" autocomplete="address-level1" placeholder="State" required /></div><input name="pincode" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{6}" placeholder="6-digit PIN code" required /><small>Your details are used only to deliver this order.</small><button id="checkout" class="button checkout" type="submit">Buy now <span>→</span></button></form></div></aside><div id="scrim" class="scrim"></div>
+    <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-dialog-title"><div class="product-dialog-inner"><button id="close-product" class="icon-button dialog-close" aria-label="Close product details">×</button><div class="detail-gallery"><div class="detail-image-wrap"><img id="detail-image" alt="" /></div><div id="detail-thumbs" class="detail-thumbs" aria-label="Product images"></div></div><div class="detail-info"><p class="eyebrow green">Vellon Organic</p><h2 id="product-dialog-title"></h2><p id="detail-copy"></p><strong id="detail-price" class="detail-price"></strong><p class="fit-note">Images are shown fully fitted, so the complete product pack is easy to see.</p><button id="detail-add" class="button checkout" type="button">Add to bag <span>→</span></button></div></div></dialog>
     <script src="app.js"></script>
   </body>
 </html>
