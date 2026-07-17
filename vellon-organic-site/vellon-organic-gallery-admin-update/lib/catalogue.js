@@ -1,0 +1,4 @@
+import { kv } from '@vercel/kv';
+export const defaultCatalogue={kit:{name:'Ayurvedic Hair Mask Kit',price:399},orange:{name:'Orange Peel Powder',price:164},neem:{name:'Neem Powder',price:120},amla:{name:'Amla Powder',price:169},hibiscus:{name:'Hibiscus Powder',price:179},shikakai:{name:'Shikakai Powder',price:199},reetha:{name:'Reetha Powder',price:199},moringa:{name:'Moringa Leaf Powder',price:199},multani:{name:'Multani Mitti',price:139},bhringraj:{name:'Bhringraj Powder',price:179},'face-combo':{name:'Orange Peel + Multani Mitti (75g each)',price:199}};
+export async function getCatalogue(){try{return {...defaultCatalogue,...(await kv.get('vellon:catalogue')||{})}}catch{return defaultCatalogue}}
+export async function setProductPrice(id,price){const catalogue=await getCatalogue();if(!catalogue[id])return null;catalogue[id]={...catalogue[id],price};await kv.set('vellon:catalogue',catalogue);return catalogue}
