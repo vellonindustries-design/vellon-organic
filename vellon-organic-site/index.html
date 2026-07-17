@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vellon Organic — pure, thoughtfully packed herbal powders for natural hair and skin care." />
+    <meta name="theme-color" content="#1c4a31" />
+    <title>Vellon Organic | Natural • Pure • Trusted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <div class="announce">Free shipping on orders above ₹499 <span>•</span> 100% natural ingredients</div>
+    <header class="nav wrap">
+      <a class="brand" href="#home" aria-label="Vellon Organic home"><img src="assets/vellon-logo.jpeg" alt="Vellon Organic" /><span>Vellon <i>Organic</i></span></a>
+      <nav aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">Our promise</a><a href="#reviews">Reviews</a></nav>
+      <button id="cart-button" class="cart-button" aria-label="View cart">Bag <b id="cart-count">0</b></button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content wrap">
+          <p class="eyebrow">From nature, with care</p>
+          <h1>Pure rituals for<br />your natural self.</h1>
+          <p class="hero-copy">Thoughtfully packed herbal powders inspired by traditional Indian beauty rituals.</p>
+          <a href="#shop" class="button button-light">Explore the collection <span>→</span></a>
+        </div>
+      </section>
+
+      <section class="trust wrap" aria-label="Why choose Vellon Organic">
+        <div><span>✦</span><p><b>Natural ingredients</b>Simple, plant-based care</p></div>
+        <div><span>✦</span><p><b>Thoughtfully packed</b>Made for everyday rituals</p></div>
+        <div><span>✦</span><p><b>Secure payments</b>Protected, simple checkout</p></div>
+      </section>
+
+      <section class="shop-section wrap" id="shop">
+        <div class="section-heading"><div><p class="eyebrow green">The Vellon collection</p><h2>Herbal care, made simple.</h2></div><p>Find a ritual that fits your routine—from single-ingredient powders to complete care kits.</p></div>
+        <div class="filters" role="group" aria-label="Product filters"><button class="active" data-filter="all">All products</button><button data-filter="hair">Hair care</button><button data-filter="skin">Skin care</button><button data-filter="combo">Combos</button></div>
+        <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="about" id="about"><div class="about-photo"></div><div class="about-copy"><p class="eyebrow green">Our promise</p><h2>Honest care, rooted in nature.</h2><p>Vellon Organic brings time-honoured herbal ingredients into easy, everyday beauty rituals. Our range is made for people who value simple ingredients and mindful self-care.</p><ul><li>Made with carefully selected herbal ingredients</li><li>Free from added harsh chemicals</li><li>Created for hair, skin and daily wellness rituals</li></ul><a href="#shop" class="text-link">Shop natural care <span>→</span></a></div></section>
+
+      <section class="reviews wrap" id="reviews"><p class="eyebrow green">Loved in daily rituals</p><h2>Kind words from our community.</h2><div class="review-grid"><blockquote>“The hair mask kit is now part of my Sunday routine. The powders feel clean and easy to mix.”<footer>Priya S. <span>•</span> Gurugram</footer></blockquote><blockquote>“Orange peel powder is gentle and fresh. I love that the ingredient list is so simple.”<footer>Megha R. <span>•</span> Jaipur</footer></blockquote><blockquote>“I ordered neem and amla powders for my mother. The packaging was neat and the quality feels genuine.”<footer>Anjali K. <span>•</span> Delhi</footer></blockquote></div></section>
+
+      <section class="newsletter"><div class="wrap"><div><p class="eyebrow">Stay close to nature</p><h2>Small rituals, thoughtful care.</h2></div><a class="button button-light" href="mailto:vellonindustries@gmail.com">Write to us <span>→</span></a></div></section>
+    </main>
+
+    <footer><div class="wrap footer-grid"><div><a class="brand footer-brand" href="#home"><img src="assets/vellon-logo.jpeg" alt="" /><span>Vellon <i>Organic</i></span></a><p>Natural • Pure • Trusted</p></div><div><h3>Contact</h3><a href="mailto:vellonindustries@gmail.com">vellonindustries@gmail.com</a><a href="tel:+919728914046">+91 97289 14046</a></div><div><h3>Explore</h3><a href="#shop">Shop all products</a><a href="#about">Our promise</a><a href="#reviews">Reviews</a></div></div><div class="wrap copyright">© <span id="year"></span> Vellon Organic. All rights reserved.</div></footer>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-label="Your bag" aria-hidden="true"><div class="cart-head"><h2>Your bag</h2><button class="icon-button" id="close-cart" aria-label="Close cart">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><b id="cart-total">₹0</b></div><form id="shipping-form" class="shipping-form"><h3>Delivery details</h3><input name="name" autocomplete="name" placeholder="Full name" required /><input name="phone" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile number" required /><textarea name="address" autocomplete="street-address" placeholder="House no., street, area" required></textarea><div class="form-row"><input name="city" autocomplete="address-level2" placeholder="City" required /><input name="state" autocomplete="address-level1" placeholder="State" required /></div><input name="pincode" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{6}" placeholder="6-digit PIN code" required /><small>Your details are used only to deliver this order.</small><button id="checkout" class="button checkout" type="submit">Buy now <span>→</span></button></form></div></aside><div id="scrim" class="scrim"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
